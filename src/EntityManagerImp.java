@@ -68,7 +68,7 @@ public class EntityManagerImp implements EntityManager {
             e.printStackTrace();
         }finally{
 
-            this.runables = Cleaner.clear(this.runables);
+            this.runables.clear();
             try {
                 if(!connection.isClosed()){
                     connection.close();
@@ -111,7 +111,7 @@ public class EntityManagerImp implements EntityManager {
             e.printStackTrace();
         }finally{
 
-            this.runables = Cleaner.clear(this.runables);
+            this.runables.clear();
             try {
                 if(!connection.isClosed()){
                     connection.close();
