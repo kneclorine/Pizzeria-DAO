@@ -1,14 +1,14 @@
 public class Ingredient extends Entity{
 
     private String name;
-    private double prize;
+    private double price;
 
     public Ingredient(){
     }
 
-    public Ingredient(String name, double prize){
+    public Ingredient(String name, double price){
         this.name = name;
-        this.prize = prize;
+        this.price = price;
     }
 
     public String getName(){
@@ -16,14 +16,14 @@ public class Ingredient extends Entity{
     }
 
     public double getPrice(){
-        return this.prize;
+        return this.price;
     }
 
     public void setName(String name){
         this.name = name;
     }
 
-    public void setPrice(double prize){
-        this.prize = prize;
+    public void setPrice(double price){
+        this.price = price;
     }
 }

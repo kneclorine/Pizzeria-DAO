@@ -22,7 +22,7 @@ public class App {
         
         Ingredient ingredient1 = EntityManagerImp.buildConnection(ConfigurationImp.getConfiguration())
                                                  .addStatement(ingredient, "SELECT id, name, price FROM ingredient WHERE id=?", (statement, entity) -> {
-                                                    statement.setBytes(1, Converter.fromUUIDtoByteArray(UUID.randomUUID()));
+                                                    statement.setBytes(1, Converter.fromUUIDtoByteArray(ingredientID));
                                                  })
                                                  .select(Ingredient.class, (resultSet, entity) -> {
                                                     entity.setId(Converter.fromByteArrayToUUID(resultSet.getBytes("id")));
